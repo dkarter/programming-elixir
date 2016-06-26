@@ -18,7 +18,7 @@ defmodule LinkedListTest do
   end
 
   test ".reduce returns accumulated value of applied function" do
-    assert LinkedList.reduce([1,2,3,4], &(&1 * &2), 1) == 24
+    assert LinkedList.reduce([1,2,3,4], &*/2, 1) == 24
   end
 
   test ".reduce returns strings in the correct order" do
