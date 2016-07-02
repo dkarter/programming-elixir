@@ -42,6 +42,16 @@ defmodule Fizzbuzz do
   # def fizzbuzz(value) when rem(value, 5) == 0, do: "buzz"
   # def fizzbuzz(value), do: Integer.to_string(value)
 
+  # One liner killer solution that everyone will love to hate
+  # split into multiple lines for readability
+  # def fizzbuzz_oneliner(val) do
+  #   %{
+  #     [true,true] => "FizzBuzz", 
+  #     [false,true] => "Fizz", 
+  #     [true,false] => "Buzz",
+  #   }[[rem(val, 3) == 0, rem(val, 5) == 0]] || val
+  # end
+
   def fizzbuzz_range(range) do
     Enum.map(range, fn(v) -> IO.puts(fizzbuzz(v)) ;end)
   end
